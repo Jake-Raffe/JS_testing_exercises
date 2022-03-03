@@ -22,21 +22,46 @@ describe('sum', () => {
     expect(actual).toBe(expected)
   });
 
-  test.skip('can add two negative numbers', () => {
-    
+  test('can add two negative numbers', () => {
+    expected = -4
+    actual = sum(-2,-2)
+    expect(actual).toBe(expected)
   });
 
-  test.skip('can add zero', () => {
-    
+  test('can add zero', () => {
+    expected = 2
+    actual = sum(0, 2)
+    expect(actual).toBe(expected)
   });
-
 });
 
 describe('subtract', () => {
 
+  test('can subtract numbers', () => {
+    expected = 2
+    actual = subtract(4, 2)
+    expect(actual).toBe(expected)
+  });
+
+  test('can subtract decimals', () => {
+    expected = 2.5
+    actual = subtract(5, 2.5)
+    expect(actual).toBe(expected)
+  });
 });
 
 describe('multiply', () => {
+  test('can multiply numbers', () => {
+    expected = 4
+    actual = multiply(2,2)
+    expect(actual).toBe(expected)
+  });
+
+  test('can multiply by 0', () => {
+    expected = 0
+    actual = multiply(54,0)
+    expect(actual).toBe(expected)
+  });
 
 });
 
