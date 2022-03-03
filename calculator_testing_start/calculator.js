@@ -11,10 +11,16 @@ const multiply = function(a,b){
 };
 
 const divide = function(a,b){
+    if (b === 0){
+        throw new Error('cannot divide by 0');
+    }
     return a/b;
 };
 
 const modulus = function(a,b){
+    if (b === 0){
+        throw new Error('cannot divide by 0');
+    }
     return a%b;
 };
 

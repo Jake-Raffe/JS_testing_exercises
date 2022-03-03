@@ -48,6 +48,12 @@ describe('subtract', () => {
     actual = subtract(5, 2.5)
     expect(actual).toBe(expected)
   });
+
+  test('can subtract two negatives', () => {
+    expected = -3
+    actual = subtract(-5, -2)
+    expect(actual).toBe(expected)
+  });
 });
 
 describe('multiply', () => {
@@ -77,19 +83,30 @@ describe('divide', () => {
     actual = divide(14,3.5)
     expect(actual).toBe(expected)
   });
+  test('can divide by negative numbers', () => {
+    expected = 2
+    actual = divide(-4, -2)
+    expect(actual).toBe(expected)
+  });
+  test('can handle divide by 0', () => {
+    expect(() => divide(2, 0)).toThrow('cannot divide by 0');
+  });
 });
 
 describe('modulus', () => {
 
-  test('can find the modulus of two numbers', () => {
+  test('can find the modulus of two numbers when answer !== 0', () => {
     expected = 4
     actual = modulus(14,5)
     expect(actual).toBe(expected)
   });
-  test('can find the modulus of two numbers', () => {
+  test('can find the modulus of two numbers when answer === 0', () => {
     expected = 0
     actual = modulus(15,5)
     expect(actual).toBe(expected)
+  });
+  test('can handle modulus 0', () => {
+    expect(() => modulus(2, 0)).toThrow('cannot divide by 0');
   });
 
 });
