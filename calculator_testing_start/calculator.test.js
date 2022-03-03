@@ -67,16 +67,55 @@ describe('multiply', () => {
 
 describe('divide', () => {
 
+  test('can divide numbers', () => {
+    expected = 2
+    actual = divide(14,7)
+    expect(actual).toBe(expected)
+  });
+  test('can divide by decimal numbers', () => {
+    expected = 4
+    actual = divide(14,3.5)
+    expect(actual).toBe(expected)
+  });
 });
 
 describe('modulus', () => {
 
+  test('can find the modulus of two numbers', () => {
+    expected = 4
+    actual = modulus(14,5)
+    expect(actual).toBe(expected)
+  });
+  test('can find the modulus of two numbers', () => {
+    expected = 0
+    actual = modulus(15,5)
+    expect(actual).toBe(expected)
+  });
+
 });
 
 describe('even', () => {
-
+  test('can check if an even number is even', () => {
+    expected = true
+    actual = even(14)
+    expect(actual).toBe(expected)
+  });
+  test('can check if an odd number is even', () => {
+    expected = false
+    actual = even(9)
+    expect(actual).toBe(expected)
+  });
 });
 
 describe('odd', () => {
-
+  test('can check if an even number is odd', () => {
+    expected = false
+    actual = odd(14)
+    expect(actual).toBe(expected)
+  });
+  test('can check if an odd number is odd', () => {
+    expected = true
+    actual = odd(9)
+    expect(actual).toBe(expected)
+  });
 });

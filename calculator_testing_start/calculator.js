@@ -3,7 +3,7 @@ const sum = function(a, b){
 };
 
 const subtract = function(a,b){
-    return a-b;
+    return a - b;
 };
 
 const multiply = function(a,b){
@@ -18,15 +18,15 @@ const modulus = function(a,b){
     return a%b;
 };
 
-const even = function(a,b){
-    if (a%b === 0){
+const even = function(a){
+    if (a%2 === 0){
         return true;
     } 
     return false;
 };
 
-const odd = function(a,b){
-    if (a%b !== 0){
+const odd = function(a){
+    if (a%2 !== 0){
         return true;
     } 
     return false;
